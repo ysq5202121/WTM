@@ -1,6 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AgGridModule } from 'ag-grid-angular';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { TableComponent } from './table/table.component';
@@ -10,11 +10,20 @@ const Component = [
 ]
 @NgModule({
    imports: [
+      CommonModule,
+      ReactiveFormsModule,
+      FormsModule,
       NgZorroAntdModule,
       AgGridModule.withComponents()
    ],
    declarations: Component,
-   exports: [NgZorroAntdModule, ...Component],
+   exports: [
+      CommonModule,
+      ReactiveFormsModule,
+      FormsModule,
+      NgZorroAntdModule,
+      ...Component
+   ],
    providers: [{ provide: NZ_I18N, useValue: zh_CN }],
 })
 export class ComponentModule { }

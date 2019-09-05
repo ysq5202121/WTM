@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.less']
 })
 export class LayoutComponent {
+  tabs = ['Tab 1', 'Tab 2'];
   isCollapsed = false;
   onCollapsed() {
     this.isCollapsed = !this.isCollapsed;

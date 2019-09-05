@@ -1,8 +1,8 @@
-import { registerLocaleData } from '@angular/common';
+import { registerLocaleData, CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import zh from '@angular/common/locales/zh';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ComponentModule } from '../component';
@@ -21,6 +21,8 @@ registerLocaleData(zh);
       AppRoutingModule,
       IconsProviderModule,
       FormsModule,
+      CommonModule,
+      ReactiveFormsModule,
       HttpClientModule,
       BrowserAnimationsModule,
       ComponentModule

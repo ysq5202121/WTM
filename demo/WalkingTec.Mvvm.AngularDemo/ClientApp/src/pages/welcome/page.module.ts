@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { ComponentModule } from '../../component';
 import { PageComponent } from './page.component';
-import { Routes, RouterModule } from '@angular/router';
+import { TesttComponent } from './testt/testt.component';
 @NgModule({
   imports: [
     RouterModule.forChild([
@@ -9,7 +10,7 @@ import { Routes, RouterModule } from '@angular/router';
     ]),
     ComponentModule
   ],
-  declarations: [PageComponent]
+  declarations: [PageComponent, TesttComponent]
 })
 export default class {
 
