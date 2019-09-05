@@ -39,21 +39,15 @@
       </div>
     </nz-header>
     <nz-content>
-      
-      <nz-tabset  [nzTabBarExtraContent]="extraTemplate" [nzAnimated] >
-        <nz-tab *ngFor="let tab of tabs" [nzTitle]="titleTemplate" >
-          <ng-template #titleTemplate>
-            <div>
-              {{ tab }}
-              <i nz-icon nzType="close" (click)="closeTab(tab)" class="ant-tabs-close-x"></i>
-            </div>
-          </ng-template>
-          Content of {{ tab }}
+
+      <nz-tabset nzLinkRouter>
+        <nz-tab>
+          <a nz-tab-link [routerLink]="['/welcome']" [queryParams]="{ tab: 'one' }" queryParamsHandling="merge">Default</a>
+        </nz-tab>
+        <nz-tab>
+          <a nz-tab-link [routerLink]="['/Monitor']" [queryParams]="{ tab: 'two' }" queryParamsHandling="merge">Two</a>
         </nz-tab>
       </nz-tabset>
-      <ng-template #extraTemplate>
-        <i class="ant-tabs-new-tab" nz-icon nzType="plus" (click)="newTab()"></i>
-      </ng-template>
       <div class="inner-content">
         <router-outlet></router-outlet>
       </div>

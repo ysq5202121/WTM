@@ -8,6 +8,7 @@ export class PageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('aaaaaaaaaaaaa')
   }
   title = 'app';
 
