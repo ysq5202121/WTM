@@ -1,7 +1,14 @@
 <ag-grid-angular 
-    style="height: 100%;" 
+    style="height: 80%;" 
     class="ag-theme-balham"
     [rowData]="rowData" 
     [columnDefs]="columnDefs"
     >
 </ag-grid-angular>
+<nz-pagination
+[(nzPageIndex)]="current"
+[nzTotal]="50"
+[nzSize]="'small'"
+nzShowSizeChanger
+nzShowQuickJumper
+></nz-pagination >

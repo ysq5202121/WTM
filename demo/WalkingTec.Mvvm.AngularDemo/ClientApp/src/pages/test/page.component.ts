@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.less']
+  templateUrl: './page.html',
+  styleUrls: ['./page.less']
 })
-export class WelcomeComponent implements OnInit {
+export class PageComponent implements OnInit  {
 
   constructor() { }
 
