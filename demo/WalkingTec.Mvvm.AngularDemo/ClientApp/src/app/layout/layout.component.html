@@ -37,17 +37,19 @@
           <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
         </span>
       </div>
+      <nz-tabset nzLinkRouter>
+          <nz-tab>
+            <a nz-tab-link routerLink="/welcome"  >Default</a>
+          </nz-tab>
+          <nz-tab>
+            <a nz-tab-link routerLink="/Monitor"   >Two</a>
+          </nz-tab>
+        </nz-tabset>
     </nz-header>
+    
     <nz-content>
 
-      <nz-tabset nzLinkRouter>
-        <nz-tab>
-          <a nz-tab-link [routerLink]="['/welcome']" [queryParams]="{ tab: 'one' }" queryParamsHandling="merge">Default</a>
-        </nz-tab>
-        <nz-tab>
-          <a nz-tab-link [routerLink]="['/Monitor']" [queryParams]="{ tab: 'two' }" queryParamsHandling="merge">Two</a>
-        </nz-tab>
-      </nz-tabset>
+    
       <div class="inner-content">
         <router-outlet></router-outlet>
       </div>
