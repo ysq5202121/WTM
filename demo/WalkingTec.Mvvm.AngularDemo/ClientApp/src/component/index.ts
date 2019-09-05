@@ -6,7 +6,7 @@ import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { TableComponent } from './table/table.component';
 
 const Component = [
-   TableComponent
+   TableComponent,
 ]
 @NgModule({
    imports: [
@@ -14,7 +14,7 @@ const Component = [
       AgGridModule.withComponents()
    ],
    declarations: Component,
-   exports: Component,
+   exports: [NgZorroAntdModule, ...Component],
    providers: [{ provide: NZ_I18N, useValue: zh_CN }],
 })
 export class ComponentModule { }

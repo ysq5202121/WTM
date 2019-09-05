@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { ComponentModule } from '../component';
 import { AppRoutingModule } from './app-route.routing';
 import { IconsProviderModule } from './icons-provider.module';
@@ -21,13 +20,12 @@ registerLocaleData(zh);
       BrowserModule,
       AppRoutingModule,
       IconsProviderModule,
-      NgZorroAntdModule,
       FormsModule,
       HttpClientModule,
       BrowserAnimationsModule,
       ComponentModule
    ],
-   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+   providers: [],
    bootstrap: [
       LayoutComponent
    ]
