@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-testt',
-  templateUrl: './testt.component.html',
-
-  styleUrls: ['./testt.component.css']
+  selector: 'page-search',
+  templateUrl: './templates.html',
+  styleUrls: ['./style.less']
 })
-export class TesttComponent implements OnInit {
+export default class implements OnInit {
+
   validateForm: FormGroup;
   controlArray: any[] = [];
   isCollapse = true;

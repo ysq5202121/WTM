@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open",
+    "start:ip": "ng serve --open --host 0.0.0.0",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,6 +22,7 @@
     "@angular/router": "~8.2.4",
     "ag-grid-angular": "^21.2.0",
     "ag-grid-community": "^21.2.0",
+    "classlist.js": "^1.1.20150312",
     "ng-zorro-antd": "^8.1.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",

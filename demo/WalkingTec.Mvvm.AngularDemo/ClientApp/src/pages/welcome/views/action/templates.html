@@ -1,0 +1,9 @@
+<ng-template #drawerTemplate let-data let-drawerRef="drawerRef">
+  <div nz-resizable (nzResize)="onResize($event)">
+    <nz-resize-handle nzDirection="left">
+      <div class="sider-resize-line"></div>
+    </nz-resize-handle>
+    <page-forms></page-forms>
+  </div>
+</ng-template>
+<button nz-button nzType="primary" (click)="openTemplate()">Use Template</button>

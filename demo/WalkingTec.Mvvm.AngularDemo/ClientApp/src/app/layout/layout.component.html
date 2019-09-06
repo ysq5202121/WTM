@@ -1,6 +1,9 @@
 <nz-layout class="app-layout">
-  <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
-    [nzTrigger]="null">
+  <nz-sider [nzWidth]="siderWidth" nz-resizable [nzMinWidth]="10" [nzMaxWidth]="350" (nzResize)="onSideResize($event)"
+    class="menu-sidebar" nzCollapsible nzBreakpoint="md" [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+    <nz-resize-handle nzDirection="right">
+      <div class="sider-resize-line"></div>
+    </nz-resize-handle>
     <div class="sidebar-logo">
       <a href="https://ng.ant.design/" target="_blank">
         <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
@@ -32,19 +35,38 @@
   </nz-sider>
   <nz-layout>
     <nz-header>
-      <div class="app-header">
-        <span class="header-trigger" (click)="onCollapsed($event)">
-          <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
-        </span>
+      <div nz-row nzType="flex" nzJustify="start" class="app-header">
+        <div nz-col nzSpan="12"> <span class="header-trigger" (click)="onCollapsed($event)">
+            <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+          </span></div>
+        <div nz-col nzSpan="12" [ngStyle]="{'textAlign': 'right'}">
+          <nz-badge [nzCount]="5" style="margin-right: 24px;">
+            <nz-avatar nz-popover nzPopoverTitle="Title" [nzPopoverContent]="contentTemplate"
+              nzPopoverPlacement="bottom" nzIcon="message"></nz-avatar>
+          </nz-badge>
+
+          <nz-avatar nz-dropdown [nzDropdownMenu]="menu" style="margin-right: 24px;"
+            nzSrc="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3339117455,124087930&fm=58&bpow=600&bpoh=388">
+          </nz-avatar>
+          <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu nzSelectable>
+              <li nz-menu-item>1st menu item</li>
+              <li nz-menu-item>2nd menu item</li>
+              <li nz-menu-item>3rd menu item</li>
+            </ul>
+          </nz-dropdown-menu>
+        </div>
       </div>
-      <nz-tabset nzLinkRouter>
-          <nz-tab>
-            <a nz-tab-link routerLink="/welcome"  >Default</a>
-          </nz-tab>
-          <nz-tab>
-            <a nz-tab-link routerLink="/Monitor"   >Two</a>
-          </nz-tab>
-        </nz-tabset>
+      <nz-tabset nzLinkRouter nzSize="small">
+        <nz-tab>
+          <a nz-tab-link routerLink="/welcome">Default <i nz-icon nzType="close" (click)="closeTab(tab)"
+              class="ant-tabs-close-x"></i></a>
+        </nz-tab>
+        <nz-tab>
+          <a nz-tab-link routerLink="/Monitor">Two <i nz-icon nzType="close" (click)="closeTab(tab)"
+              class="ant-tabs-close-x"></i></a>
+        </nz-tab>
+      </nz-tabset>
     </nz-header>
     <nz-content>
       <div class="inner-content">
@@ -53,3 +75,13 @@
     </nz-content>
   </nz-layout>
 </nz-layout>
+<ng-template #contentTemplate>
+  <nz-tabset>
+    <nz-tab nzTitle="Tab 1">
+      Content of Tab Pane 1
+    </nz-tab>
+    <nz-tab nzTitle="Tab 2">
+      Content of Tab Pane 2
+    </nz-tab>
+  </nz-tabset>
+</ng-template>
