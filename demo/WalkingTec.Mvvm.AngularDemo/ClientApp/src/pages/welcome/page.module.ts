@@ -1,18 +1,24 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ComponentModule } from '../../component';
-import { PageComponent } from './page.component';
+import { ComponentModule } from 'component';
+import { HttpService } from 'service/http.service';
 import ActionComponent from './views/action';
+import FormsComponent from './views/forms';
 import SearchComponent from './views/search';
 import TableComponent from './views/table';
-import FormsComponent from './views/forms';
-const Components = [
-  PageComponent,
-  ActionComponent,
-  SearchComponent,
-  TableComponent,
-  FormsComponent
-]
+@Component({
+  template: `
+  <page-search></page-search>
+  <page-action></page-action>
+  <page-table></page-table>
+  `,
+})
+class PageComponent implements OnInit {
+  constructor() { }
+  ngOnInit() {
+
+  }
+}
 @NgModule({
   imports: [
     RouterModule.forChild([
@@ -20,10 +26,12 @@ const Components = [
     ]),
     ComponentModule
   ],
-  // entryComponents: Components,
-  declarations: Components
+  providers: [HttpService],
+  declarations: [PageComponent, ActionComponent, SearchComponent, TableComponent, FormsComponent]
 })
 export default class {
-
+  constructor(private HttpService: HttpService) {
+    console.log("TCL: constructor -> HttpService", HttpService)
+    this.HttpService.onInit({}).onTest()
+  }
 }
-

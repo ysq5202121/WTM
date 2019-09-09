@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from 'service/http.service'
 
 @Component({
   selector: 'page-table',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export default class implements OnInit {
 
-  constructor() { }
+  constructor(private Http: HttpService) { }
 
   ngOnInit() {
   }

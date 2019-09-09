@@ -7,6 +7,21 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./style.less']
 })
 export default class implements OnInit {
+  constructor(private FB: FormBuilder) { }
+  ngOnInit(): void {
+    this.validateForm = this.FB.group({
+      email: ['896630361@qq.com', [Validators.email, Validators.required]],
+      password: [null, [Validators.required]],
+      checkPassword: [null, [Validators.required, this.confirmationValidator]],
+      nickname: [null, [Validators.required]],
+      phoneNumberPrefix: ['+86'],
+      phoneNumber: [null, [Validators.required]],
+      website: [null, [Validators.required]],
+      captcha: [null, [Validators.required]],
+      agree: [false]
+    });
+    console.log("TCL: constructor -> this.validateForm ", this.validateForm)
+  }
   validateForm: FormGroup;
   submitForm(): void {
     for (const i in this.validateForm.controls) {
@@ -30,21 +45,5 @@ export default class implements OnInit {
 
   getCaptcha(e: MouseEvent): void {
     e.preventDefault();
-  }
-
-  constructor(private fb: FormBuilder) { }
-
-  ngOnInit(): void {
-    this.validateForm = this.fb.group({
-      email: [null, [Validators.email, Validators.required]],
-      password: [null, [Validators.required]],
-      checkPassword: [null, [Validators.required, this.confirmationValidator]],
-      nickname: [null, [Validators.required]],
-      phoneNumberPrefix: ['+86'],
-      phoneNumber: [null, [Validators.required]],
-      website: [null, [Validators.required]],
-      captcha: [null, [Validators.required]],
-      agree: [false]
-    });
   }
 }
