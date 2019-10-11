@@ -1,12 +1,12 @@
 {
-  "name": "editor",
+  "name": "@WTM/editor",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     
   },
   "devDependencies": {
-    "react-scripts": "3.1.2"
+    "react-scripts": "3.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

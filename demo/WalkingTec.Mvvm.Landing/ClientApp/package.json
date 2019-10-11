@@ -3,29 +3,30 @@
   "private": true,
   "devDependencies": {
     "@types/jest": "24.0.18",
-    "@types/node": "12.7.8",
-    "@types/react": "16.9.3",
+    "@types/node": "12.7.12",
+    "@types/react": "16.9.5",
     "@types/react-dom": "16.9.1",
-    "lerna": "^3.16.4",
-    "react-scripts": "3.1.2",
+    "lerna": "^3.17.0",
+    "react-scripts": "3.2.0",
     "rimraf": "^3.0.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.4"
   },
   "dependencies": {
-    "antd": "^3.23.4",
-    "gg-editor": "^3.0.0-beta.2",
+    "antd": "^3.23.6",
+    "gg-editor": "^3.0.0-beta.3",
     "hammerjs": "^2.0.8",
     "lodash": "^4.17.15",
     "lodash-decorators": "^6.0.1",
-    "mobx": "^5.13.1",
+    "mobx": "^5.14.0",
     "mobx-persist": "^0.4.1",
     "mobx-react": "^6.1.3",
     "nprogress": "^0.2.0",
-    "react": "^16.10.1",
+    "react": "^16.10.2",
     "react-beautiful-dnd": "^11.0.5",
     "react-codemirror2": "^6.0.0",
     "react-contexify": "^4.1.1",
-    "react-dom": "^16.10.1",
+    "react-dom": "^16.10.2",
+    "react-json-view": "^1.19.1",
     "rxjs": "^6.5.3"
   }
 }
