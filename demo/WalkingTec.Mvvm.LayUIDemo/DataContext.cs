@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using System;
 using System.Collections.Generic;
@@ -9,6 +9,10 @@ namespace WalkingTec.Mvvm.LayUIDemo
 {
     public class DataContext : FrameworkContext
     {
+        public DataContext(CS cs): base(cs)
+        {
+        }
+
         public DataContext(string cs, DBTypeEnum dbtype)
              : base(cs, dbtype)
         {
