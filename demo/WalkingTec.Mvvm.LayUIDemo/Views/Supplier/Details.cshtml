@@ -1,0 +1,14 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.SupplierVMs.SupplierVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.SupplierName" />
+<wt:display field="Entity.SupplierAddress" />
+<wt:display field="Entity.SupplierContact" />
+<wt:display field="Entity.SupplierPhone" />
+<wt:display field="Entity.SupplierTelephone" />
+</wt:row>
+    <wt:row align=" AlignEnum.Right">
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

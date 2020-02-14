@@ -1,0 +1,14 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.CityVMs.CityVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:combobox field="Entity.ProvinceID" items="AllProvinces"/>
+<wt:textbox field="Entity.CityName" />
+<wt:textbox field="Entity.LocationPoint" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

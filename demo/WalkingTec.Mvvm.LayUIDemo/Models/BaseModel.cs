@@ -7,43 +7,30 @@ namespace WalkingTec.Mvvm.LayUIDemo.Models
     }
 
     /// <summary>
-    /// 单据状态
+    /// 预算分类材料下的类型
     /// </summary>
-    public enum OrderStatusEnum
+    public enum UseTypeEnum
     {
-        [Display(Name = "未发货")]
+        [Display(Name = "采购(台)")]
+        Buy = 0,
+        [Display(Name = "租赁(小时)")]
+        Rent = 1
+    }
+
+    /// <summary>
+    /// 项目状态枚举
+    /// </summary>
+    public enum ProjectStatusEnum
+    {
+        [Display(Name = "新建")]
         Draft = 0,
-        [Display(Name = "已发货")]
-        Progress = 1,
-        [Display(Name = "已完结")]
-        Complete = 2
-    }
-
-    /// <summary>
-    /// 支付状态
-    /// </summary>
-    public enum PaymentStatusEnum
-    {
-        [Display(Name = "未付款")]
-        UnPay = 0,
-        [Display(Name = "已付款")]
-        Paid = 1
-    }
-
-    /// <summary>
-    /// 付款方式
-    /// </summary>
-    public enum PaymentTypeEnum
-    {
-        [Display(Name = "现金")]
-        Cash = 0,
-        [Display(Name = "微信")]
-        WX = 1,
-        [Display(Name = "支付宝")]
-        ZFB = 2,
-        [Display(Name = "信用卡")]
-        CreditCard = 3,
-        [Display(Name = "其他")]
-        Other = 4
+        [Display(Name = "预算提交")]
+        BudgetSubmit = 1,
+        [Display(Name = "预算驳回")]
+        RejectSubmit = 2,
+        [Display(Name = "预算锁定")]
+        BudgetLock = 3,
+        [Display(Name = "作废")]
+        Invalid = 4
     }
 }

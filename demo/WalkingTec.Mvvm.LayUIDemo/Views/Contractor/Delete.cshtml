@@ -1,0 +1,19 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.ContractorVMs.ContractorVM
+
+<wt:form vm="@Model">
+	<wt:quote>确定要删除这条数据么：</wt:quote>
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.Province.ProvinceName" />
+<wt:display field="Entity.ContractorName" />
+<wt:display field="Entity.ContractorAddress" />
+<wt:display field="Entity.ContractorContact" />
+<wt:display field="Entity.ZipCode" />
+<wt:display field="Entity.Email" />
+<wt:display field="Entity.ContractorPhone" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align=" AlignEnum.Right">
+        <wt:submitbutton theme=" ButtonThemeEnum.Warm" text="删除"/>
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

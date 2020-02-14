@@ -1,0 +1,9 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.BudgetCategoryVMs.BudgetCategoryListVM
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:textbox field="Searcher.CategoryCode" />
+<wt:textbox field="Searcher.CategoryName" />
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/BudgetCategory/Search"/>

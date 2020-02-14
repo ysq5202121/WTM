@@ -1,0 +1,11 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.ProvinceVMs.ProvinceVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.ProvinceName" />
+<wt:display field="Entity.ProvinceCode" />
+</wt:row>
+    <wt:row align=" AlignEnum.Right">
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

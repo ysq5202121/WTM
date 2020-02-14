@@ -1,0 +1,22 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.SupplierCategoryPriceVMs.SupplierCategoryPriceVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.BudgetCategory.CategoryName" />
+<wt:display field="Entity.BudgetSubCategory.SubCategoryName" />
+<wt:display field="Entity.Supplier.SupplierName" />
+<wt:display field="Entity.ContractNo" />
+<wt:display field="Entity.Price" />
+<wt:display field="Entity.PriceEffectiveEndDate" />
+<wt:display field="Entity.Brand" />
+<wt:display field="Entity.Format" />
+<wt:display field="Entity.UseType" />
+<wt:display field="Entity.WorkNumber" />
+<wt:display field="Entity.MarketPrice" />
+<wt:display field="Entity.FileAttachmentID" />
+<wt:display field="Entity.OutSourceType" />
+</wt:row>
+    <wt:row align=" AlignEnum.Right">
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

@@ -1,0 +1,9 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.ProvinceVMs.ProvinceListVM
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:textbox field="Searcher.ProvinceName" />
+<wt:textbox field="Searcher.ProvinceCode" />
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/Province/Search"/>

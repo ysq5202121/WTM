@@ -1,0 +1,16 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.ProjectVMs.ProjectListVM
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:textbox field="Searcher.ProjectNo" />
+<wt:textbox field="Searcher.ProjectName" />
+<wt:combobox field="Searcher.ProvinceID" items="Searcher.AllProvinces" empty-text="全部" />
+<wt:combobox field="Searcher.CityID" items="Searcher.AllCitys" empty-text="全部" />
+<wt:combobox field="Searcher.ContractorAID" items="Searcher.AllContractorAs" empty-text="全部" />
+<wt:combobox field="Searcher.ContractorBID" items="Searcher.AllContractorBs" empty-text="全部" />
+<wt:datetime field="Searcher.ContractSignDate" />
+<wt:datetime field="Searcher.ContractEndDate" />
+<wt:combobox field="Searcher.Status" empty-text="全部" />
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/Project/Search"/>

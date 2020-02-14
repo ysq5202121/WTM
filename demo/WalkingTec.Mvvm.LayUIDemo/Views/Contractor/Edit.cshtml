@@ -1,0 +1,18 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.ContractorVMs.ContractorVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:combobox field="Entity.ProvinceID" items="AllProvinces"/>
+<wt:textbox field="Entity.ContractorName" />
+<wt:textbox field="Entity.ContractorAddress" />
+<wt:textbox field="Entity.ContractorContact" />
+<wt:textbox field="Entity.ZipCode" />
+<wt:textbox field="Entity.Email" />
+<wt:textbox field="Entity.ContractorPhone" />
+</wt:row>
+    <wt:hidden field="Entity.ID" />
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

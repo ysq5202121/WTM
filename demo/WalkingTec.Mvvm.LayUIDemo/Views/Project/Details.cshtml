@@ -1,0 +1,24 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.ProjectVMs.ProjectVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.ProjectNo" />
+<wt:display field="Entity.ProjectName" />
+<wt:display field="Entity.Province.ProvinceName" />
+<wt:display field="Entity.City.CityName" />
+<wt:display field="Entity.ContractorA.ContractorName" />
+<wt:display field="Entity.ContractorB.ContractorName" />
+<wt:display field="Entity.ContractIntroduction" />
+<wt:display field="Entity.ContractDocumentID" />
+<wt:display field="Entity.ContractSignDate" />
+<wt:display field="Entity.ContractEndDate" />
+<wt:display field="Entity.ContractAmount" />
+<wt:display field="Entity.CashPledge" />
+<wt:display field="Entity.SpecifiedBudgeAmount" />
+<wt:display field="Entity.EstimateBudgeAmount" />
+<wt:display field="Entity.Status" />
+</wt:row>
+    <wt:row align=" AlignEnum.Right">
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

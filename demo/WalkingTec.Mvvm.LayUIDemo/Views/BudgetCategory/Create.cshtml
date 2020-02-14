@@ -1,0 +1,12 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.BudgetCategoryVMs.BudgetCategoryVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:textbox field="Entity.CategoryCode" />
+<wt:textbox field="Entity.CategoryName" />
+</wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

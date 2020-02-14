@@ -1,0 +1,9 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.BudgetSubCategoryVMs.BudgetSubCategoryListVM
+
+<wt:searchpanel vm="@Model" reset-btn="true">
+<wt:row items-per-row="ItemsPerRowEnum.Three">
+<wt:combobox field="Searcher.BudgetCategoryID" items="Searcher.AllBudgetCategorys" empty-text="全部" />
+<wt:textbox field="Searcher.SubCategoryName" />
+</wt:row>
+</wt:searchpanel>
+<wt:grid vm="@Model" url="/BudgetSubCategory/Search"/>

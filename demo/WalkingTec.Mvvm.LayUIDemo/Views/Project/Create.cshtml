@@ -1,0 +1,25 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.ProjectVMs.ProjectVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:textbox field="Entity.ProjectNo" />
+<wt:textbox field="Entity.ProjectName" />
+<wt:combobox field="Entity.ProvinceID" items="AllProvinces"/>
+<wt:combobox field="Entity.CityID" items="AllCitys"/>
+<wt:combobox field="Entity.ContractorAID" items="AllContractorAs"/>
+<wt:combobox field="Entity.ContractorBID" items="AllContractorBs"/>
+<wt:textbox field="Entity.ContractIntroduction" />
+<wt:upload field="Entity.ContractDocumentID" />
+<wt:datetime field="Entity.ContractSignDate" />
+<wt:datetime field="Entity.ContractEndDate" />
+<wt:textbox field="Entity.ContractAmount" />
+<wt:textbox field="Entity.CashPledge" />
+<wt:textbox field="Entity.SpecifiedBudgeAmount" />
+<wt:textbox field="Entity.EstimateBudgeAmount" />
+<wt:combobox field="Entity.Status" />
+</wt:row>
+    <wt:row align="AlignEnum.Right">
+        <wt:submitbutton />
+        <wt:closebutton />
+    </wt:row>
+</wt:form>

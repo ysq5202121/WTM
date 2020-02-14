@@ -24,8 +24,7 @@ namespace WalkingTec.Mvvm.LayUIDemo
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //如果自增列不是主键，需要设置此属性
-            modelBuilder.Entity<CustomerInfo>().HasAlternateKey(x => x.CustomerNo);
-            modelBuilder.Entity<ProductInfo>().HasAlternateKey(x => x.ProductNo);
+            //modelBuilder.Entity<CustomerInfo>().HasAlternateKey(x => x.CustomerNo);
         }
 
         public override async Task<bool> DataInit(object allModules, bool IsSpa)
@@ -71,24 +70,44 @@ namespace WalkingTec.Mvvm.LayUIDemo
         public DbSet<IdentitySeed> IdentitySeeds { get; set; }
 
         /// <summary>
-        /// 客户表信息
+        /// 省份表
         /// </summary>
-        public DbSet<CustomerInfo> CustomerInfoes { get; set; }
+        public DbSet<Province> Provinces { get; set; }
 
         /// <summary>
-        /// 商品表信息
+        /// 城市表
         /// </summary>
-        public DbSet<ProductInfo> ProductInfoes { get; set; }
+        public DbSet<City> Cities { get; set; }
 
         /// <summary>
-        /// 订单主表
+        /// 预算分类表
         /// </summary>
-        public DbSet<OrderInfo> OrderInfoes { get; set; }
+        public DbSet<BudgetCategory> BudgetCategories { get; set; }
 
         /// <summary>
-        /// 订单子表
+        /// 预算品类表
         /// </summary>
-        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<BudgetSubCategory> BudgetSubCategories { get; set; }
+
+        /// <summary>
+        /// 承建商
+        /// </summary>
+        public DbSet<Contractor> Contractors { get; set; }
+
+        /// <summary>
+        /// 供应商
+        /// </summary>
+        public DbSet<Supplier> Suppliers { get; set; }
+
+        /// <summary>
+        /// 供应商品类价格表
+        /// </summary>
+        public DbSet<SupplierCategoryPrice> SupplierCategoryPrices { get; set; }
+
+        /// <summary>
+        /// 项目表
+        /// </summary>
+        public DbSet<Project> Projects { get; set; }
     }
 
     /// <summary>

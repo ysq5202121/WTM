@@ -1,0 +1,12 @@
+﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.CityVMs.CityVM
+
+<wt:form vm="@Model">
+<wt:row items-per-row="ItemsPerRowEnum.Two">
+<wt:display field="Entity.Province.ProvinceName" />
+<wt:display field="Entity.CityName" />
+<wt:display field="Entity.LocationPoint" />
+</wt:row>
+    <wt:row align=" AlignEnum.Right">
+        <wt:closebutton />
+    </wt:row>
+</wt:form>
