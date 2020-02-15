@@ -1,14 +1,14 @@
-﻿@model WalkingTec.Mvvm.LayUIDemo.ViewModels.BudgetCategoryVMs.BudgetCategoryVM
+@model WalkingTec.Mvvm.LayUIDemo.ViewModels.BudgetCategoryVMs.BudgetCategoryVM
 
 <wt:form vm="@Model">
-	<wt:quote>确定要删除这条数据么：</wt:quote>
-<wt:row items-per-row="ItemsPerRowEnum.Two">
-<wt:display field="Entity.CategoryCode" />
-<wt:display field="Entity.CategoryName" />
-</wt:row>
-    <wt:hidden field="Entity.ID" />
-    <wt:row align=" AlignEnum.Right">
-        <wt:submitbutton theme=" ButtonThemeEnum.Warm" text="删除"/>
-        <wt:closebutton />
-    </wt:row>
+  <wt:quote>确定要删除这条数据么：</wt:quote>
+  <wt:row items-per-row="ItemsPerRowEnum.One">
+    <wt:display field="Entity.CategoryCode" label-width="120" />
+    <wt:display field="Entity.CategoryName" label-width="120" />
+  </wt:row>
+  <wt:hidden field="Entity.ID" />
+  <wt:row align=" AlignEnum.Right">
+    <wt:submitbutton theme=" ButtonThemeEnum.Warm" text="删除" />
+    <wt:closebutton />
+  </wt:row>
 </wt:form>

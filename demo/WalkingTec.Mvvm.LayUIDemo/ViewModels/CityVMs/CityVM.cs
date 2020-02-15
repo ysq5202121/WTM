@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,11 +21,11 @@ namespace WalkingTec.Mvvm.LayUIDemo.ViewModels.CityVMs
 
         protected override void InitVM()
         {
-            AllProvinces = DC.Set<Province>().GetSelectListItems(LoginUserInfo?.DataPrivileges, null, y => y.ProvinceName);
+            AllProvinces = DC.Set<Province>().OrderBy(x => x.ProvinceCode).Select(x => new ComboSelectListItem { Text = x.ProvinceName, Value = x.ID + "" }).ToList();
         }
 
         public override void DoAdd()
-        {           
+        {
             base.DoAdd();
         }
 

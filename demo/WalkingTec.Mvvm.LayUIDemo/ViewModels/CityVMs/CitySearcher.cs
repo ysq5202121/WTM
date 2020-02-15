@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using WalkingTec.Mvvm.Core;
 using WalkingTec.Mvvm.Core.Extensions;
 using WalkingTec.Mvvm.LayUIDemo.Models;
@@ -19,7 +20,7 @@ namespace WalkingTec.Mvvm.LayUIDemo.ViewModels.CityVMs
 
         protected override void InitVM()
         {
-            AllProvinces = DC.Set<Province>().GetSelectListItems(LoginUserInfo?.DataPrivileges, null, y => y.ProvinceName);
+            AllProvinces = DC.Set<Province>().OrderBy(x => x.ProvinceCode).Select(x => new ComboSelectListItem { Text = x.ProvinceName, Value = x.ID + "" }).ToList();
         }
     }
 }
